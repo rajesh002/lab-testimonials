@@ -1,0 +1,22 @@
+<h1>Here Is What Our Prograds Have To Say</h1>
+
+
+<ul class="userdata">
+  <li *ngFor="let data of newuser">
+    <h3>{{data.name}}</h3>
+    <p>{{data.experience}}</p>
+  </li>
+</ul>
+
+
+<div form>
+  <div>
+    <label for="user-name">Name:</label>
+    <input type="text" [(ngModel)]="userfeedback.name">
+  </div>
+  <div>
+    <label for="user-experience">Experience:</label>
+    <input type="text" [(ngModel)]="userfeedback.experience">
+  </div>
+  <button (click)="adduser(userfeedback)">POST</button>
+</div>
